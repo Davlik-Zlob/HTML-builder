@@ -14,7 +14,7 @@ async function createBundle() {
     }
   }
   const bundlePath = path.join(__dirname, 'project-dist', 'bundle.css');
-  await fs.rm(bundlePath, { recoursive: true, force: true });
+  await fs.rm(bundlePath, { recursive: true, force: true });
   await fs.writeFile(bundlePath, stylesArr.join('\n'));
 }
 createBundle();
